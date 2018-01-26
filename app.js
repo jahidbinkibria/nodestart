@@ -1,4 +1,5 @@
 var fs = require("fs");
 
-var fileRead = fs.readFileSync('textfile.txt','utf8');
-fs.writeFileSync("writeMe.txt", fileRead);
+fs.readFile('textfile.txt','utf8', function(err, data){
+    fs.writeFile("writeMe.txt", data);
+});
